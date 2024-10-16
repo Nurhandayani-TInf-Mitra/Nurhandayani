@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  final IconData icon;
-  final Color bgColor;
+  final String text;
   final VoidCallback onPressed;
 
-  const CustomButton({
-    required this.icon,
-    required this.bgColor,
-    required this.onPressed,
-  });
+  const CustomButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        decoration: BoxDecoration(
-          color: bgColor,
-          shape: BoxShape.circle,
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.red, // gunakan backgroundColor bukan primary
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
         ),
-        padding: const EdgeInsets.all(8.0),
-        child: Icon(icon, color: Colors.white),
       ),
+      child: Text(text),
     );
   }
 }
