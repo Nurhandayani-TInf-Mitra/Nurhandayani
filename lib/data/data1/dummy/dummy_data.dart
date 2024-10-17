@@ -4,11 +4,11 @@ List<EventModel> dummyEvents = [
   EventModel(
     title: "BTS Concert",
     date: "15 Oct",
-    imageUrl: "https://example.com/bts.jpg",
+    imageUrl: "image/bts.jpeg",
   ),
   EventModel(
     title: "Taylor Swift Concert",
     date: "20 Oct",
-    imageUrl: "https://example.com/taylor.jpg",
+    imageUrl: "image/TaylorSwift.jpg",
   ),
 ];

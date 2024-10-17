@@ -12,7 +12,7 @@ class EventCard extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Image.network(event.imageUrl), // Periksa URL gambar valid
+          Image.asset(event.imageUrl), // Periksa URL gambar valid
           Padding(
             padding: const EdgeInsets.all(8.0), // Tambahkan padding agar konten lebih rapi
             child: Column(
